@@ -39,26 +39,29 @@ export default function Example() {
                   <div className="flex items-center">
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <div className='flex-row'>
                                 {navigation.map((item) => (
-                                <>
-                                        <FontAwesomeIcon icon={item.icon} style={{color: "#ffffff"}} className='pl-5'/>
+                                <div className={classNames(
+                                        item.current
+                                            ? 'bg-gray-900 text-white'
+                                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                        'rounded-md px-2 py-2 text-sm font-medium'
+                                        )}>
+                                        <FontAwesomeIcon icon={item.icon} className='text-gray-300'/>
                                     <a
                                         key={item.name}
                                         href={item.href}
                                         className={classNames(
                                         item.current
                                             ? 'bg-gray-900 text-white'
-                                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                                        'rounded-md px-3 py-2 text-sm font-medium'
+                                            : 'text-gray-300',
+                                        'rounded-md px-2 py-2 text-sm font-medium'
                                         )}
                                         aria-current={item.current ? 'page' : undefined}
                                     >
                                         {item.name}
                                     </a>
-                                </>
+                                </div>
                                 ))}
-                            </div>
                       </div>
                     </div>
                   </div>
@@ -85,16 +88,22 @@ export default function Example() {
                           <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                             {userNavigation.map((item) => (
                               <Menu.Item key={item.name}>
-                                {({ active } :any) => (
-                                  <a
-                                    href={item.href}
-                                    className={classNames(
-                                      active ? 'bg-gray-100' : '',
-                                      'block px-4 py-2 text-sm text-gray-700'
-                                    )}
-                                  >
-                                            {item.name}
-                                  </a>
+                                {({ active }: any) => (
+                                  <div className={classNames(
+                                        active ? 'bg-gray-100' : '',
+                                        'px-4 py-2 text-sm text-gray-700'
+                                  )}>
+                                    <FontAwesomeIcon icon={item.icon} className='text-gray-700'/>
+                                    <a
+                                      href={item.href}
+                                      className={classNames(
+                                        active ? 'bg-gray-100' : '',
+                                        'px-4 py-2 text-sm text-gray-700'
+                                      )}
+                                    >
+                                        {item.name}
+                                    </a>
+                                  </div>
                                 )}
                               </Menu.Item>
                             ))}
@@ -120,18 +129,24 @@ export default function Example() {
               <Disclosure.Panel className="md:hidden">
                 <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
                   {navigation.map((item) => (
-                    <Disclosure.Button
-                      key={item.name}
-                      as="a"
-                      href={item.href}
-                      className={classNames(
-                        item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                        'block rounded-md px-3 py-2 text-base font-medium'
-                      )}
-                      aria-current={item.current ? 'page' : undefined}
-                    >
-                      {item.name}
-                    </Disclosure.Button>
+                    <div className={classNames(
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-3 py-2 text-base font-medium'
+                    )}>
+                      <FontAwesomeIcon icon={item.icon} className='text-gray-300'/>
+                      <Disclosure.Button
+                        key={item.name}
+                        as="a"
+                        href={item.href}
+                        className={classNames(
+                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'rounded-md px-3 py-2 text-base font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </Disclosure.Button>
+                    </div>
                   ))}
                 </div>
                 <div className="border-t border-gray-700 pb-3 pt-4">
@@ -146,14 +161,17 @@ export default function Example() {
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (
-                      <Disclosure.Button
-                        key={item.name}
-                        as="a"
-                        href={item.href}
-                        className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
-                      >
-                        {item.name}
-                      </Disclosure.Button>
+                      <div className="rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white">
+                        <FontAwesomeIcon icon={item.icon} className='text-gray-400'/>
+                        <Disclosure.Button
+                          key={item.name}
+                          as="a"
+                          href={item.href}
+                          className="rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
+                        >
+                          {item.name}
+                        </Disclosure.Button>
+                      </div>
                     ))}
                   </div>
                 </div>
