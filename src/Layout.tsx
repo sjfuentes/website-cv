@@ -2,7 +2,8 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 const user = {
   name: 'Santiago Fuentes',
@@ -11,15 +12,15 @@ const user = {
     'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
 }
 const navigation = [
-  { name: 'Home', href: '/', current: false, icon: faGithub },
-  { name: 'Skills', href: '/skills', current: false, icon: faGithub },
-  { name: 'Experience', href: '/experience', current: false, icon: faGithub },
-  { name: 'Education', href: '/education', current: false, icon: faGithub },
-  { name: 'Portfolios', href: '/portfolio', current: false, icon: faGithub },
+  { name: 'Home', href: '/', current: false, icon: icon({name: 'house', family: 'classic', style: 'solid'})},
+  { name: 'Skills', href: '/skills', current: false, icon: icon({name: 'hand', family: 'classic', style: 'solid'}) },
+  { name: 'Experience', href: '/experience', current: false, icon: icon({name: 'id-badge', family: 'classic', style: 'solid'}) },
+  { name: 'Education', href: '/education', current: false, icon: icon({name: 'building-columns', family: 'classic', style: 'solid'}) },
+  { name: 'Portfolios', href: '/portfolio', current: false, icon: icon({name: 'briefcase', family: 'classic', style: 'solid'}) },
 ]
 const userNavigation = [
-  { name: 'LinkedIn', href: 'http://www.linkedin.com/in/sjfuentes', icon: 'fa-brands fa-linkedin' },
-  { name: 'GitHub', href: 'https://github.com/sjfuentes', icon: 'fa-brands fa-github'},
+  { name: 'LinkedIn', href: 'http://www.linkedin.com/in/sjfuentes', icon: faLinkedin },
+  { name: 'GitHub', href: 'https://github.com/sjfuentes', icon: faGithub},
 ]
 
 function classNames(...classes: string[]) {
