@@ -16,7 +16,7 @@ const navigation = [
   { name: 'Skills', href: '/skills', current: false, icon: icon({name: 'hand', family: 'classic', style: 'solid'}) },
   { name: 'Experience', href: '/experience', current: false, icon: icon({name: 'id-badge', family: 'classic', style: 'solid'}) },
   { name: 'Education', href: '/education', current: false, icon: icon({name: 'building-columns', family: 'classic', style: 'solid'}) },
-  { name: 'Portfolios', href: '/portfolio', current: false, icon: icon({name: 'briefcase', family: 'classic', style: 'solid'}) },
+  { name: 'Portfolio', href: '/portfolio', current: false, icon: icon({name: 'briefcase', family: 'classic', style: 'solid'}) },
 ]
 const userNavigation = [
   { name: 'LinkedIn', href: 'http://www.linkedin.com/in/sjfuentes', icon: faLinkedin },
@@ -27,7 +27,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Example() {
+export default function Layout({ title }: any ) {
   return (
     <>
       <div className="min-h-full">
@@ -179,15 +179,11 @@ export default function Example() {
             </>
           )}
         </Disclosure>
-
         <header className="bg-white shadow">
           <div className="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-            <h1 className="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900">{ title }</h1>
           </div>
         </header>
-        <main>
-          <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">{/* Your content */}</div>
-        </main>
       </div>
     </>
   )
