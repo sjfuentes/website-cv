@@ -14,6 +14,11 @@ const Languajes: ILanguajes[] = [
         id: 2,
         languaje: 'English',
         level: 'Advanced Professional'
+    },
+    {
+        id: 3,
+        languaje: 'asdgasdg',
+        level: 'gasdg'
     }
 ]
 

@@ -1,10 +1,10 @@
 function LanguajeItem({ languaje }: any) {
   return (
-    <div className='card'>
-          <div className='num-display'>{languaje.id}</div>
-          <div className="text-display">{languaje.languaje}</div>
-          <div className="text-display">{languaje.level}</div>
-    </div>
+    <>
+      
+        <h2 className=" text-xl title-font font-medium mb-3">{languaje.languaje}</h2>
+        <p className="leading-relaxed text-sm text-justify">{languaje.level}</p>
+    </>
   )
 }
 
