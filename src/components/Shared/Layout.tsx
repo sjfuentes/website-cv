@@ -8,8 +8,7 @@ import { icon } from '@fortawesome/fontawesome-svg-core/import.macro'
 const user = {
   name: 'Santiago Fuentes',
   email: 'sjfuentes@outlook.com',
-  imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+  imageUrl: '../images/IMG_1280.jpeg',
 }
 const navigation = [
   { name: 'Home', href: '/', current: false, icon: icon({name: 'house', family: 'classic', style: 'solid'})},

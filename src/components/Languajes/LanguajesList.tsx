@@ -1,4 +1,3 @@
-import React from "react"
 import LanguajeItem from "./LanguajeItem"
 
 function LanguajesList({ languajes }:any) {

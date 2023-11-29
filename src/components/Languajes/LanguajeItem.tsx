@@ -1,5 +1,3 @@
-import React from "react"
-
 function LanguajeItem({ languaje }: any) {
   return (
     <div className='card'>
