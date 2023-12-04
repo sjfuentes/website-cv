@@ -1,10 +1,10 @@
-interface IEducation { 
+interface IStudies { 
     id: number;
     university: string;
     title: string;
 }
 
-const Education: IEducation[] = [
+const Studies: IStudies[] = [
     {
         id: 1,
         university: 'Armed Forces University',
@@ -12,4 +12,4 @@ const Education: IEducation[] = [
     }
 ]
 
-export default Education
+export default Studies
