@@ -5,7 +5,17 @@
   "projects": {
     "AngularCV": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -99,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "ccaf3ae8-b435-44d6-9eac-10fe7f4e235f"
+    "analytics": "20922a15-6c7c-4809-8be1-aed20fb0d145"
   }
 }
