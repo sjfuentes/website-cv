@@ -14,6 +14,8 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { ProjectModalComponent } from './project-modal/project-modal.component'
 import { CarouselModule } from 'ngx-bootstrap/carousel'
+import { AccordionModule } from 'ngx-bootstrap/accordion'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,8 +33,11 @@ import { CarouselModule } from 'ngx-bootstrap/carousel'
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     ModalModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    AccordionModule.forRoot()
   ],
   providers: [
     provideClientHydration()
