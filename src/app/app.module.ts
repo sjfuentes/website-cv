@@ -16,6 +16,7 @@ import { ProjectModalComponent } from './project-modal/project-modal.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     ModalModule.forRoot(),
     CarouselModule.forRoot(),
     CollapseModule.forRoot(),
