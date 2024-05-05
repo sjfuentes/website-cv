@@ -1,17 +1,93 @@
 <div class="container text-center">
     <button class="btn btn-primary mb-5 shadow border" (click)="DownloadFile()">Download PDF Resume</button>
-    <accordion>
-        <accordion-group heading="Work Experience"> 
+    
+    <div class="pb-2">
+        <accordion [isAnimated]="true" class="shadow">
+            <accordion-group [(isOpen)]="isWorkExperienceOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Work Experience</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isWorkExperienceOpen" style="color: white;">></div>
+                        <div *ngIf="isWorkExperienceOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Software Engineer</h2>
+                    <h3 class="text-primary">Sample Complany</h3>
+                    <ul>
+                        <li>asgdasgsdg</li>
+                        <li>fasgasdg</li>
+                        <li>gasdgsdgasdg</li>
+                    </ul>
+                </div>
+                <hr>
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Software Engineer</h2>
+                    <h3 class="text-primary">Sample Complany</h3>
+                    <ul>
+                        <li>asgdasgsdg</li>
+                        <li>fasgasdg</li>
+                        <li>gasdgsdgasdg</li>
+                    </ul>
+                </div>
 
-        </accordion-group>
-        <accordion-group heading="Education">
-        
-        </accordion-group>
-        <accordion-group heading="Certifications">
-        
-        </accordion-group>
-        <accordion-group heading="Skills">
-        
-        </accordion-group>
-    </accordion>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isEducationOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Education</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isEducationOpen" style="color: white;">></div>
+                        <div *ngIf="isEducationOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+            
+            </accordion-group>
+            <accordion-group [(isOpen)]="isCertificationOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Certifications</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isCertificationOpen" style="color: white;">></div>
+                        <div *ngIf="isCertificationOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+
+                <div style="text-align: left;">
+                    <h3>Microsoft Azure Fundamentsl</h3>
+                    <ul>
+                        <li>Obtained ....</li>
+                        <li>#53246234</li>
+                    </ul>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isSkillOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;">></div>
+                    <div class="btn-link">Skills</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isSkillOpen" style="color: white;">></div>
+                        <div *ngIf="isSkillOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+
+                <div class="row" style="text-align: left;">
+                    <div class="col">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>C#</li>
+                            <li>TypeScript</li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h3>Frameworks</h3>
+                        <ul>
+                            <li>Angular</li>
+                        </ul>
+                    </div>
+                </div>
+            </accordion-group>
+        </accordion>
+    </div>
 </div>

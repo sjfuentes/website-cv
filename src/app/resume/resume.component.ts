@@ -1,5 +1,6 @@
 import { Component, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { flatMap } from 'rxjs';
 
 @Component({
   selector: 'app-resume',
@@ -7,6 +8,13 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './resume.component.css'
 })
 export class ResumeComponent {
+
+  isWorkExperienceOpen: boolean = false;
+  isEducationOpen: boolean = false;
+  isCertificationOpen: boolean = false;
+  isSkillOpen: boolean = false;
+
+
   constructor(private titleService: Title, private redender: Renderer2) {
     this.titleService.setTitle('Santiago Fuentes - Resume')
   }
